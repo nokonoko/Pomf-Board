@@ -9,7 +9,7 @@
     <title>PomfBoards - /everythinggoes/</title>
   </head>
   <body>
-  	<div class="container-fluid">
+    <div class="container-fluid">
     <center><h1>/everythinggoes/</h1></center>
     <center><p>Alpha V.0.0.0.0.0.1 @ <a href="https://github.com/nokonoko/Pomf-Board">Github</a></p>
       <p>Code changes live, so site might break sometimes, just reload.</p></center>
@@ -25,15 +25,15 @@
         <button type="submit" class="btn btn-default">Post!</button>
   </form><br>
 
-	<?php
-	if(PHP_ERRORS == 'true'){
+  <?php
+  if(PHP_ERRORS == 'true'){
   ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
   }
-	require_once('includes/php/core.php');
-	GetPost();
-	?>
-	</div>
-	</body>
+  require_once('includes/php/core.php');
+  GetPost();
+  ?>
+  </div>
+  </body>
 </html>

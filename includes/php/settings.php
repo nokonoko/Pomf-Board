@@ -12,6 +12,7 @@ define('DB_CONN', 'sqlite:/home/neku/www/db/board.sq3');
 define('MAX_POSTS', '1000');
 
 //Set max posts shown
+define('MAX_POSTS_SHOWN', '100');
 
 //Show PHP errors
 define('PHP_ERRORS', 'true'); 
