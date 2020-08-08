@@ -26,11 +26,6 @@
     </form><br>
 
   <?php
-  if(PHP_ERRORS == 'true'){
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-  }
   require_once('includes/php/core.php');
   GetPost();
   ?>

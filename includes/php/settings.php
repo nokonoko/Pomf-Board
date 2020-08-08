@@ -14,6 +14,6 @@ define('MAX_POSTS', '1000');
 //Set max posts shown
 define('MAX_POSTS_SHOWN', '100');
 
-//Show PHP errors
-define('PHP_ERRORS', 'true'); 
+//Show PDO errors
+define('PDO_ERRORS', 'false'); 
 ?>
