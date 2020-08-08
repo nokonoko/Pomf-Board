@@ -36,6 +36,9 @@
       <textarea class="form-control" rows="5" id="text" name="text" placeholder="Max 1000 chars" maxlength="1000"></textarea>
     </div>
         <button type="submit" class="btn btn-default">Post!</button>
+        <span>
+          <span id="char-count">0</span>/<span id="max-count"></span>
+        </span>
   </form><br>
 
 	<?php
