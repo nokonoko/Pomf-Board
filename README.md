@@ -10,7 +10,7 @@ neku@pomf.se or https://twitter.com/nekunekus
 # To-Do
 Don't be shy, open a issue or pull request.
 
-* Add chars remaining shown for message
+* ~~Add chars remaining shown for message~~
 * Option for DB pruning after X amount of posts
 * Option for how many posts should be shown and/or pagination
 * Posting/fetching using JS?
