@@ -17,7 +17,19 @@
       <input type="name" class="form-control" id="name" name="name" placeholder="Anon">
     </div>
     <div class="form-group">
-      <textarea class="form-control" rows="5" id="text" name="text" placeholder="Max 1000 chars" maxlength="1000"></textarea>
+      <input disabled maxlength="1000" size="3" value="10" id="counter">
+<textarea class="form-control" rows="5" id="text" onkeyup="textCounter(this,'counter',1000);" name="text" placeholder="Max 1000 chars" maxlength="1000"></textarea>
+<script>
+  function textCounter(field, field2, maxlimit) {;
+    var countfield = document.getElementById(field2);
+    if (field.value.length > maxlimit) {
+      field.value = field.value.substring(0, maxlimit);
+      return false;
+    } else {
+      countfield.value = maxlimit - field.value.length;
+    }
+  }
+</script>
     </div>
         <button type="submit" class="btn btn-default">Post!</button>
   </form><br>
