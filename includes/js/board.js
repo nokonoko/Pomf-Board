@@ -1,4 +1,4 @@
-window.onload = () => {
+        window.onload = () => {
 (function setupCharacterCount() {
   const MAX_LENGTH = 1000
   const inputEl = document.getElementById('text')
