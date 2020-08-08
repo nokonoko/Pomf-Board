@@ -15,5 +15,4 @@ define('MAX_POSTS', '1000');
 define('MAX_POSTS_SHOWN', '100');
 
 //Show PDO errors
-define('PDO_ERRORS', 'false'); 
-?>
+define('PDO_ERRORS', 'false');
