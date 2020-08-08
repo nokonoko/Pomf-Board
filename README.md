@@ -1,11 +1,11 @@
 # Pomf-Board
- Simple and fast message board, see live at [Board.pomf.se]: https://board.pomf.se
+ Simple and fast message board, see live at https://board.pomf.se
 
 # Setup
 Just make a DB and table from 'make_schema.sql' file and change the settings in 'includes/settings.php'. Easy peasy.
 
 # Contact
-[neku@pomf.se]: mailto:neku@pomf.se or [@nekunekus]: https://twitter.com/nekunekus
+neku@pomf.se or https://twitter.com/nekunekus
 
 # To-Do
 Don't be shy, open a issue or pull request.
