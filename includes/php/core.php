@@ -31,6 +31,7 @@ function GetPost(){
 	global $db;
 
 	$q = $db->prepare('SELECT * FROM posts ORDER BY id DESC LIMIT 100');
+	//$q = bindValue(':limit', MAX_POSTS_SHOWN, PDO::PARAM_INT);
 	$q->execute();
 
 	while ($row = $q->fetch(PDO::FETCH_ASSOC)){
