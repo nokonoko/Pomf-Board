@@ -15,12 +15,12 @@ function MakePost($name, $title, $text){
 	//Prepare for insert
 	$q = $db->prepare('INSERT INTO posts (name, text, time)
 		VALUES (:name, :text, :time)');
-	
+
 	//Insert values into DB
 	$q->execute([
 	'name' => $sane_name,
 	'text' => $sane_text,
-	'time' => date(DATE_RFC2822),
+	'time' => time(),
 	]);
 
 	header("Location: https://board.pomf.se");
@@ -35,7 +35,13 @@ function GetPost(){
 	$q->execute();
 
 	while ($row = $q->fetch(PDO::FETCH_ASSOC)){
-		print '<blockquote><b>ID:</b> '.$row['id'].'<br><b>Time:</b> '.$row['time'].'<br><b>Name:</b> '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
+
+		//Convert timestamp to something readable
+		$time = $row['time'];
+		$timeraw = new DateTime("@$time");
+		$sane_time = $timeraw->format('c');
+
+		print '<blockquote><b>ID:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b> '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
 	}
 
 }
