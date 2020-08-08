@@ -1,9 +1,11 @@
-  function textCounter(field, field2, maxlimit) {;
-    var countfield = document.getElementById(field2);
-    if (field.value.length > maxlimit) {
-      field.value = field.value.substring(0, maxlimit);
-      return false;
-    } else {
-      countfield.value = maxlimit - field.value.length;
-    }
-  }
+(function setupCharacterCount() {
+	const MAX_LENGTH = 1000
+	const inputEl = document.getElementById('text')
+	const countEl = document.getElementById('char-count')
+
+	countEl.value = MAX_LENGTH
+
+	inputEl.addEventListener('input', (evt) => {
+	  countEl.value = MAX_LENGTH - evt.target.value.length
+	})
+})()
