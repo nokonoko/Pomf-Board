@@ -10,7 +10,7 @@
   <body>
   	<div class="container-fluid">
     <center><h1>/everythinggoes/</h1></center>
-    <center><p>Alpha V.0.0.0.0.0.1</p></center>
+    <center><p>Alpha V.0.0.0.0.0.1 @ <a href="https://github.com/nokonoko/Pomf-Board">Github</a></p></center>
     <form action="api.php" method="POST">
     <form class="form-inline">
     <div class="form-group">
