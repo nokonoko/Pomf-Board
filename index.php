@@ -19,7 +19,7 @@
       <input type="name" class="form-control" id="name" name="name" placeholder="Anon">
     </div>
     <div class="form-group">
-      <input disabled maxlength="1000" size="3" value="1000" id="counter">
+      <input disabled maxlength="4" size="3" value="1000" id="counter">
 <textarea class="form-control" rows="5" id="text" onkeyup="textCounter(this,'counter',1000);" name="text" placeholder="Max 1000 chars" maxlength="1000"></textarea>
     </div>
         <button type="submit" class="btn btn-default">Post!</button>
