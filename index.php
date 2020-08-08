@@ -6,22 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="includes/css/bootstrap.min.css">
-  <title>PomfBoards - /everythinggoes/</title>
-  <script>
-    window.onload = () => {
-      (function setupCharacterCount() {
-        const MAX_LENGTH = 1000
-        const inputEl = document.getElementById('text')
-        const countEl = document.getElementById('char-count')
-
-        countEl.value = MAX_LENGTH
-
-        inputEl.addEventListener('input', (evt) => {
-          countEl.value = MAX_LENGTH - evt.target.value.length
-        })
-      })()
-    }
-  </script>
+  <title>PomfBoards - /everythinggoes/</title> 
+  <script src="includes/js/board.js"></script>
 </head>
 
 <body>
