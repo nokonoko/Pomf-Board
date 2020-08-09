@@ -2,7 +2,7 @@
 require_once('settings.php');
 require_once('db.php');
 
-function MakePost($name, $title, $text)
+function MakePost($name, $title, $text): void
 {
     global $db;
 
@@ -26,7 +26,7 @@ function MakePost($name, $title, $text)
     header("Location: https://board.pomf.se");
 }
 
-function GetPost()
+function GetPost(): void
 {
     global $db;
 
@@ -41,6 +41,7 @@ function GetPost()
         $timeraw = new DateTime("@$time");
         $sane_time = $timeraw->format('c');
 
-        print '<blockquote><b>ID:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b> '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
+        print '<blockquote><b>ID:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b>
+        '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
     }
 }
