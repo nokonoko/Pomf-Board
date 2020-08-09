@@ -8,17 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET"){
     //Get request for fetching new posts
     AjaxPosts($_GET['post'] ?? 0);
 } else {
-
-    if (empty($_POST['name'])) {
-        $name = 'Anon';
-    } else {
-        $name = $_POST['name'];
-    }
-    
     if (empty($_POST['text'])) {
         header("Location: " . $_SERVER['REQUEST_SCHEME'] . "://" . HOST_NAME);
     } else {
-        MakePost($name, $_POST['text']);
+        MakePost($_POST['name'] ?? 'Anon', $_POST['text']);
     }
-
 }
