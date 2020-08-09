@@ -11,6 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET"){
     if (empty($_POST['text'])) {
         header("Location: " . $_SERVER['REQUEST_SCHEME'] . "://" . HOST_NAME);
     } else {
-        MakePost($_POST['name'] ?? 'Anon', $_POST['text']);
+        MakePost(!empty($_POST['name']) ? $_POST['name'] : 'Anon', $_POST['text']);
     }
 }
