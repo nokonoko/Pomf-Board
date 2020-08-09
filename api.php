@@ -10,5 +10,5 @@ if (empty($_POST['name'])) {
 if (empty($_POST['text'])) {
     header("Location: https://board.pomf.se");
 } else {
-    MakePost($name, $_POST['title'], $_POST['text']);
+    MakePost($name, $_POST['text']);
 }

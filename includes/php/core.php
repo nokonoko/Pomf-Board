@@ -2,7 +2,7 @@
 require_once('settings.php');
 require_once('db.php');
 
-function MakePost($name, $title, $text): void
+function MakePost(string $name, string $text): void
 {
     global $db;
 
