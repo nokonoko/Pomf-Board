@@ -45,3 +45,21 @@ function GetPost(): void
         '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
     }
 }
+
+function AjaxPosts($latest = 0): void
+{
+    global $db;
+    $latest = strip_tags($latest);
+    $q = $db->prepare('SELECT * FROM posts WHERE id > :latest ORDER BY id DESC LIMIT :limit');
+    $q->bindValue(':latest', $latest, PDO::PARAM_STR);
+    $q->bindValue(':limit', MAX_POSTS_SHOWN, PDO::PARAM_STR);
+    $q->execute();
+    $posts = $q->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($posts as &$row){
+        $time = $row['time'];
+        $timeraw = new DateTime("@$time");
+        $row['time'] = $timeraw->format('c');
+    }
+    unset($row);
+    print json_encode($posts);
+}
