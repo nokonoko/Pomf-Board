@@ -23,7 +23,7 @@ function MakePost(string $name, string $text): void
     'time' => time(),
     ]);
 
-    header("Location: https://board.pomf.se");
+    header("Location: " . $_SERVER['REQUEST_SCHEME'] . "://" . HOST_NAME);
 }
 
 function GetPost(): void

@@ -8,7 +8,7 @@ if (empty($_POST['name'])) {
 }
 
 if (empty($_POST['text'])) {
-    header("Location: https://board.pomf.se");
+    header("Location: " . $_SERVER['REQUEST_SCHEME'] . "://" . HOST_NAME);
 } else {
     MakePost($name, $_POST['text']);
 }
