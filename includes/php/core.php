@@ -55,5 +55,11 @@ function AjaxPosts($latest = 0): void
     $q->bindValue(':limit', MAX_POSTS_SHOWN, PDO::PARAM_STR);
     $q->execute();
     $posts = $q->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($posts as &$row){
+        $time = $row['time'];
+        $timeraw = new DateTime("@$time");
+        $row['time'] = $timeraw->format('c');
+    }
+    unset($row);
     print json_encode($posts);
 }
