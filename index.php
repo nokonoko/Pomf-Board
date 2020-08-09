@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="includes/css/bootstrap.min.css">
   <script src="includes/js/board.js"></script>
+  <link rel='icon' href='includes/img/favicon.ico' type='image/x-icon'/ >
     <title>PomfBoards - /everythinggoes/</title>
   </head>
   <body>
