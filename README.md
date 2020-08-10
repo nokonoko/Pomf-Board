@@ -4,6 +4,11 @@
 # Setup
 Assuming you have already set up Nginx/PHP/SQLite3 or whatever you wanna use make a DB using 'make_schema.sql' and then edit the settings in 'includes/php/settings.php'. Easy peasy lemon squeezie!
 
+If you want to delete posts older than 10 days from the DB setup to run this in ur crontab or w/e:
+```bash
+sqlite3 /path/to/db.sq3 "DELETE FROM posts WHERE time <= strftime('%s', datetime('now', '-10 day'));"
+```
+
 # Contact
 neku@pomf.se or https://twitter.com/nekunekus
 
