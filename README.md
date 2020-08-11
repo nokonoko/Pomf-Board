@@ -18,7 +18,7 @@ Don't be shy, open a issue or pull request.
 * ~~Add chars remaining shown for message~~
 * Option for DB pruning after X amount of posts
 * ~~Option for how many posts should be shown and/or pagination~~
-* ~~Posting/fetching using JS? Fetches new posts every 30 seconds~~
+* Posting/fetching using JS?
 * Mod functions
 * Image support
 * Thread support and option for it, default should be no threads
