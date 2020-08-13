@@ -41,7 +41,7 @@ function GetPost(): void
         $timeraw = new DateTime("@$time");
         $sane_time = $timeraw->format('c');
 
-        print '<blockquote><b>POST NO.:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b>
+        print '<blockquote><b>Post:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b>
         '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
     }
 }
