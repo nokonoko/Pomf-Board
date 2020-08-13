@@ -41,7 +41,7 @@ function GetPost(): void
         $timeraw = new DateTime("@$time");
         $sane_time = $timeraw->format('c');
 
-        print '<blockquote><b>ID:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b>
+        print '<blockquote><b>POST NO.:</b> '.$row['id'].'<br><b>Time:</b> '.$sane_time.'<br><b>Name:</b>
         '.$row['name'].'</blockquote><pre>'.$row['text'].'</pre><br>';
     }
 }
@@ -55,11 +55,15 @@ function AjaxPosts($latest = 0): void
     $q->bindValue(':limit', MAX_POSTS_SHOWN, PDO::PARAM_STR);
     $q->execute();
     $posts = $q->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($posts as &$row){
+    foreach ($posts as &$row) {
         $time = $row['time'];
         $timeraw = new DateTime("@$time");
         $row['time'] = $timeraw->format('c');
     }
     unset($row);
     print json_encode($posts);
+}
+
+function UploadFile($file): void
+{
 }
