@@ -1,5 +1,5 @@
 # Pomf-Board
- Simple and fast message board, see live at https://board.pomf.se
+ Simple and fast message board.
 
 It's lacking A LOT of features right now, I will work on this... one day.
 
