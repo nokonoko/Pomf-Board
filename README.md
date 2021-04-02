@@ -1,6 +1,8 @@
 # Pomf-Board
  Simple and fast message board, see live at https://board.pomf.se
 
+It's lacking A LOT of features right now, I will work on this... one day.
+
 # Setup
 Assuming you have already set up Nginx/PHP/SQLite3 or whatever you wanna use make a DB using 'make_schema.sql' and then edit the settings in 'includes/php/settings.php'. Easy peasy lemon squeezie!
 
